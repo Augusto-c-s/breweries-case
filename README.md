@@ -14,6 +14,7 @@ This data engineering project is designed to build an end-to-end data pipeline t
 ### Key Technologies
 
 **Apache Airflow**: Used for orchestration, ensuring reliable scheduling and execution of the ETL pipeline.
+
 **Docker**: Provides containerization for seamless project setup, ensuring consistency across environments.
 
 ## Project Structure

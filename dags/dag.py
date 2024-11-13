@@ -17,7 +17,7 @@ default_args = {
 dag = DAG(
     'pipeline',
     default_args=default_args,
-    description='Pipeline to use api and create the',
+    description='Pipeline to make an ETL process',
     schedule_interval=timedelta(days=1),
     start_date=datetime(2023, 11, 1),
     catchup=False,

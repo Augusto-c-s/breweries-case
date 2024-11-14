@@ -29,3 +29,52 @@ This data engineering project is designed to build an end-to-end data pipeline t
 - **Infrastructure as Code with Terraform**: Automate and streamline the setup of cloud infrastructure, making deployment more scalable and maintainable.
 - **GCP Integration with Dataform or DBT**: Implement Dataform or DBT for managing data transformations, especially if using Google Cloud Platform for hosting the data lake.
 - **Monitoring**: Add monitoring tools and dashboards to track data quality, pipeline performance, and alerts for failure handling.
+
+## Prerequisites
+
+**Docker** and **Docker Compose** installed on your system.
+
+**Python** installed on your system.
+
+## Setup
+
+### Step 1: Clone the Repository
+
+Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/your-repository.git
+cd your-repository
+```
+### Step 2: Set up environment variables
+
+Add a ```.env ``` file in the root directory to define Airflow keys and other sensitive information.
+
+### Step 3: Initialize the database
+
+For run database migrations and create the first user account:
+```bash
+docker compose up airflow-init
+```
+
+After initialization is complete, you should see a message like this:
+```
+airflow-init_1       | Upgrades done
+airflow-init_1       | Admin user airflow created
+airflow-init_1       | 2.10.3
+start_airflow-init_1 exited with code 0
+```
+
+The account created has the login ```airflow``` and the password ```airflow```.
+
+### Step 4: Running Airflow
+
+In your terminal run:
+```bash
+docker compose up
+```
+
+After ```docker``` inicialized you can access in your web browser and navigate to: ```http://localhost:8080/```
+
+
+

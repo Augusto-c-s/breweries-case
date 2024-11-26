@@ -9,7 +9,7 @@ This data engineering project is designed to build an end-to-end data pipeline t
 
 **Silver Layer**: Transformed data stored in Parquet format, making it ready for more efficient querying and processing.
 
-**Gold Layer**: Aggregated data (such as brewery count by type and state), saved in CSV format and optimized for analytical queries.
+**Gold Layer**: Aggregated data (such as brewery count by type and state), saved in parquet format and optimized for analytical queries.
 
 ### Key Technologies
 
